@@ -1,20 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 export default function NewArtist (){
     const [artistForm, setArtistForm] = useState({
-        name:"",
+        name: "",
         birth_date: "",
         hometown: "",
-        country: ""        
+        country: "",        
     })
 
-    function inputChange (event){
+
+    function inputChange(event){
         setArtistForm({
             ...artistForm,
-            [event.target.name]:event.target.value
+            [event.target.name]: event.target.value
         })
     }
-    function handleArtistPost(e){
+    // console.log(inputChange())
+    
+    function handleSubmit(e){
         e.preventDefault();
         fetch ('http://localhost:9292/artists', {
             method: 'POST',
@@ -29,53 +32,59 @@ export default function NewArtist (){
         )
     }
     return (
-        <form onSubmit = { handleArtistPost }>
-            <div>
-                <label>Artist Name</label>
-                <div>
+        <form onSubmit = {handleSubmit}>
+            <div className="row mb-3">
+                <label className="col-sm-2">Artist Name</label>
+                <div className="col-sm-10">
                 <input
                     className="form-control" 
-                    name="Artist Name"
+                    name="name"
                     placeholder="Enter Artist Name"
                     value={artistForm.name}
-                    onChange={ inputChange}
-                    required={true}
-                /> 
-                </div>
-                <label>Birth Date</label>
-                <div>
-                <input
-                    className="form-control" 
-                    name="Birth Date"
-                    placeholder="Birth Date format yyyy-mm-dd"
-                    value={artistForm.birth_date}
-                    onChange={ inputChange}
-                    required={true}
-                /> 
-                </div>
-                <label>Artist Hometown</label>
-                <div>
-                <input
-                    className="form-control" 
-                    name="Artist Hometown"
-                    placeholder="Enter Artist Hometown"
-                    value={artistForm.hometown}
-                    onChange={ inputChange}
-                    required={true}
-                /> 
-                </div>
-                <label>Artist Country</label>
-                <div>
-                <input
-                    className="form-control" 
-                    name="Artist Country"
-                    placeholder="Enter Artist Country"
-                    value={artistForm.country}
-                    onChange={ inputChange}
+                    onChange={ inputChange }
                     required={true}
                 /> 
                 </div>
             </div>
+                <div className="row mb-3">
+                <label className="col-sm-2">Birth Date</label>
+                <div className="col-sm-10">
+                <input
+                    className="form-control" 
+                    name="birth_date"
+                    placeholder="Birth Date format yyyy-mm-dd"
+                    value={artistForm.birth_date}
+                    onChange={ inputChange }
+                    required={true}
+                /> 
+                </div>
+                </div>
+                <div className="row mb-3">
+                <label className="col-sm-2">Artist Hometown</label>
+                <div className="col-sm-10">                
+                <input
+                    className="form-control" 
+                    name="hometown"
+                    placeholder="Enter Artist Hometown"
+                    value={artistForm.hometown}
+                    onChange={ inputChange }
+                    required={true}
+                /> 
+                </div>
+                </div>
+                <div className="row mb-3">
+                <label className="col-sm-2">Artist Country</label>
+                <div className="col-sm-10">
+                <input
+                    className="form-control" 
+                    name="country"
+                    placeholder="Enter Artist Country"
+                    value={artistForm.country}
+                    onChange={ inputChange }
+                    required={true}
+                /> 
+                </div>
+                </div>            
             <input type="submit" value="Add Artist" />
         </form>
     )
