@@ -23,8 +23,8 @@ export default function ArtistList(){
             <section>
             <h1>Trending Artists</h1>
             {artistList} 
-            </section>     
-            
+            </section> 
+                       
         </div>
     );
     
