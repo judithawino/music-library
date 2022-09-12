@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import ArtistList from './ArtistList';
+// import AlbumList from './AlbumList';
+// import GenreList from './GenreList';
+// import SongList from './SongList';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <div className='navbar'>
+          <h1 className='navbar-brand'>Music Library</h1>
+          <Link className="nav-link active" aria-current="page" to="/">Artist</Link>
+          <Link className="nav-link active" to="/album">Album</Link>
+          <Link className="nav-link active" to="/songs">Songs</Link>                           
+        </div>
+        <Routes>
+          <Route exact path="/" element={<ArtistList />}/>
+          {/* <Route exact path="/about" element={<About />}/>
+          <Route excat path="/services" element={<Services />}/> 
+          <Route excat path="/feedbacks" element={<FeedbackCard />}/> 
+          <Route excat path="/gallery" element={<GalleryList />}/> 
+          <Route exact path="/contact" element={<Contact />} />       */}
+        </Routes>
+      </Router>
     </div>
   );
 }
