@@ -13,15 +13,12 @@ function App() {
           <h1 className='navbar-brand'>Music Library</h1>
           <Link className="nav-link active" aria-current="page" to="/">Artist</Link>
           <Link className="nav-link active" to="/album">Album</Link>
-          <Link className="nav-link active" to="/songs">Songs</Link>                           
+          <Link className="nav-link active" to="/songs">Songs</Link> 
+                                    
         </div>
         <Routes>
           <Route exact path="/" element={<ArtistList />}/>
-          {/* <Route exact path="/about" element={<About />}/>
-          <Route excat path="/services" element={<Services />}/> 
-          <Route excat path="/feedbacks" element={<FeedbackCard />}/> 
-          <Route excat path="/gallery" element={<GalleryList />}/> 
-          <Route exact path="/contact" element={<Contact />} />       */}
+                 
         </Routes>
       </Router>
     </div>
