@@ -12,7 +12,7 @@ export default function Artist({artistObject}){
       <h4>Albums</h4>
       <ul>
       {albums.map((album) => (
-            <li>{album.album_name}</li>
+            <li key = {album.id}>{album.album_name}</li>
         ))}        
       </ul>   
     </div>
