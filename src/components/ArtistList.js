@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Artist from './Artist';
+import NewArtist from './NewArtist';
 
 export default function ArtistList(){
     const [artist, setArtist] = useState([]);
@@ -23,7 +24,8 @@ export default function ArtistList(){
             <section>
             <h1>Trending Artists</h1>
             {artistList} 
-            </section> 
+            </section>
+            <NewArtist />
                        
         </div>
     );
