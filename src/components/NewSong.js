@@ -35,11 +35,22 @@ export default function NewSong (){
         )
     }
     return (
+        
         <form onSubmit = {handleSubmit}>
             <div className="row mb-3">
                 <label className="col-sm-2">Song Name</label>
                 <div className="col-sm-10">
                 <input
+                    style={{
+                        outline: 1,
+                        background: "#001920",
+                        color: "#c5c8c8",
+                        width: "100%",
+                        border: 0,
+                        margin: "0 0 15px",
+                        padding: "15px",
+                        boxSizing: "border-box",
+                        fontSize: "14px"}}
                     className="form-control" 
                     name="title"
                     placeholder="Enter Song Name"
@@ -53,6 +64,16 @@ export default function NewSong (){
                 <label className="col-sm-2">Artist ID:</label>
                 <div className="col-sm-10">
                 <input
+                    style={{
+                        outline: 1,
+                        background: "#001920",
+                        color: "#c5c8c8",
+                        width: "100%",
+                        border: 0,
+                        margin: "0 0 15px",
+                        padding: "15px",
+                        boxSizing: "border-box",
+                        fontSize: "14px"}}
                     className="form-control" 
                     name="artist_id"
                     placeholder="Enter Song artist_id"
@@ -66,6 +87,16 @@ export default function NewSong (){
                 <label className="col-sm-2">Album ID:</label>
                 <div className="col-sm-10">                
                 <input
+                    style={{
+                        outline: 1,
+                        background: "#001920",
+                        color: "#c5c8c8",
+                        width: "100%",
+                        border: 0,
+                        margin: "0 0 15px",
+                        padding: "15px",
+                        boxSizing: "border-box",
+                        fontSize: "14px"}}
                     className="form-control" 
                     name="album_id"
                     placeholder="Enter Song album_id"
@@ -79,6 +110,16 @@ export default function NewSong (){
                     <label className="col-sm-2">Genre ID:</label>
                     <div className="col-sm-10">
                     <input
+                        style={{
+                            outline: 1,
+                            background: "#001920",
+                            color: "#c5c8c8",
+                            width: "100%",
+                            border: 0,
+                            margin: "0 0 15px",
+                            padding: "15px",
+                            boxSizing: "border-box",
+                            fontSize: "14px"}}
                         className="form-control" 
                         name="genre_id"
                         placeholder="Enter Song genre_id"
@@ -92,6 +133,16 @@ export default function NewSong (){
                     <label className="col-sm-2">Has Lyrics:</label>
                     <div className="col-sm-10">
                     <input
+                        style={{
+                            outline: 1,
+                            background: "#001920",
+                            color: "#c5c8c8",
+                            width: "100%",
+                            border: 0,
+                            margin: "0 0 15px",
+                            padding: "15px",
+                            boxSizing: "border-box",
+                            fontSize: "14px"}}
                         className="form-control" 
                         name="has_lyrics"
                         placeholder="Enter Song has_lyrics"

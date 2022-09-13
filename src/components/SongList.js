@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Song from './Song';
-import NewSong from './NewSong';
+
 
 export default function SongList(){
     const [song, setSong] = useState([]);
@@ -24,8 +24,7 @@ export default function SongList(){
             <section>
             <h1>Trending songs and Genres</h1>
             {songList} 
-            </section>
-            <NewSong />
+            </section>          
                        
         </div>
     );
