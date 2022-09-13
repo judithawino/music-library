@@ -18,7 +18,7 @@ export default function NewGenre (){
     
     function handleSubmit(e){
         e.preventDefault();
-        fetch ('http://localhost:9292/genres', {
+        fetch ('https://trendy1-music-librabry.herokuapp.com/genres', {
             method: 'POST',
             headers:{"content-type": "application/json"},
             body: JSON.stringify({

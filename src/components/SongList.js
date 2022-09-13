@@ -6,7 +6,7 @@ export default function SongList(){
     const [song, setSong] = useState([]);
 
     function handleSongFetch(){
-        fetch ('http://localhost:9292/songs')
+        fetch ('https://trendy1-music-librabry.herokuapp.com/songs')
         .then ((resp)=>resp.json())
         .then ((data)=>{
             setSong(data);

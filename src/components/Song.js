@@ -4,7 +4,7 @@ export default function Song({songObject, onDelete}){
     const {title, artist, id} = songObject    
 
     function handleDeleteClick() {
-        fetch(`http://localhost:9292/songs/${songObject.id}`, {
+        fetch(`https://trendy1-music-librabry.herokuapp.com/songs/${songObject.id}`, {
           method: "DELETE",
         })
           .then((r) => r.json())

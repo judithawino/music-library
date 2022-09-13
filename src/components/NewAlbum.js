@@ -18,7 +18,7 @@ export default function NewAlbum (){
     
     function handleSubmit(e){
         e.preventDefault();
-        fetch ('http://localhost:9292/albums', {
+        fetch ('https://trendy1-music-librabry.herokuapp.com/albums', {
             method: 'POST',
             headers:{"content-type": "application/json"},
             body: JSON.stringify({

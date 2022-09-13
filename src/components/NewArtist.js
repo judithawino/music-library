@@ -19,7 +19,7 @@ export default function NewArtist (){
     
     function handleSubmit(e){
         e.preventDefault();
-        fetch ('http://localhost:9292/artists', {
+        fetch ('https://trendy1-music-librabry.herokuapp.com/artists', {
             method: 'POST',
             headers:{"content-type": "application/json"},
             body: JSON.stringify({

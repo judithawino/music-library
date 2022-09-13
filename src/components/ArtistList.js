@@ -6,7 +6,7 @@ export default function ArtistList(){
     const [artist, setArtist] = useState([]);
 
     function handleArtistFetch(){
-        fetch ('http://localhost:9292/artists')
+        fetch ('https://trendy1-music-librabry.herokuapp.com/artists')
         .then ((resp)=>resp.json())
         .then ((data)=>{
             setArtist(data);
