@@ -14,9 +14,16 @@ export default function SongList(){
     }
     useEffect(handleSongFetch, [])
 
+    function handleDelete(deletedSong) {
+        const newSongList=song.filter((song)=>
+        song.id!==deletedSong.id);
+        setSong(newSongList);
+      }
+
     const songList = song.map((songs)=>(
         <Song key={songs.id}
         songObject = {songs}
+        onDelete={handleDelete}
         />
     ))
     return (
