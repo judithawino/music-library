@@ -22,10 +22,10 @@ export default function SongList(){
     return (
         <div>
             <section>
-            <h1>Trending songs</h1>
+            <h1>Trending songs and Genres</h1>
             {songList} 
             </section>
-            
+            {/* <NewSong /> */}
                        
         </div>
     );
